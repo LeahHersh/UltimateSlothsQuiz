@@ -1,10 +1,8 @@
 
 //
-//  ResultsViewController.swift
+//  ResultsViewController.swift copied from web
 //  QuizApp
 //
-//  Created by Vivian Phung on 6/19/18.
-//  Copyright © 2018 Vivian Phung. All rights reserved.
 //
 import UIKit
 
