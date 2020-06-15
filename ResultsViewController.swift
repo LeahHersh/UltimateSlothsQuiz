@@ -1,44 +1,38 @@
+//
+//  ResultsViewController.swift
+//  Ultimate Sloths Quiz
+//
+//  Created by admin on 5/24/20.
+//  Copyright © 2020 admin. All rights reserved.
+//
 
-//
-//  ResultsViewController.swift copied from web
-//  QuizApp
-//
-//
 import UIKit
 
 class ResultsViewController: UIViewController {
+    var total:Int=0;
+           var noCorrect:Int=0
+    @IBOutlet weak var resultsMessageLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
 
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var resultsLabel: UILabel!
-    
-    
-    var noCorrect:Int=0
-    var total: Int = 0
     override func viewDidLoad() {
+       
         super.viewDidLoad()
-       // Set the results
-        resultsLabel.text = "You got \(noCorrect) out of \(total) correct"
-        print(total)
-        print(noCorrect)
-        
-        // Calculate the percentage of quesitons you got right
-        var percentRight = ((Double(noCorrect)) / (Double(total)))
-        percentRight = percentRight * 100
-        
-        // Based on the percentage of questions you got right present the user with different message
-        var title: String = ""
-        if(percentRight < 40) {
-            title = "Not Good"
-        } else if(percentRight < 70) {
-            title = "Almost"
-        } else {
-            title = "Good Job"
-        }
-        titleLabel.text = title
- 
+            resultsMessageLabel.text = "You got \(noCorrect) out of \(total)"
+        resultsMessageLabel.text = "Hey sloths fan."
         // Do any additional setup after loading the view.
     }
- 
-}
+    
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
